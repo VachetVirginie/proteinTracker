@@ -31,7 +31,7 @@
       "
     >
       <h1>{{ productName }}</h1>
-      Protein per 100g: {{ proteinValue }} g
+      Proteine pour 100g: {{ proteinValue }} g
       <div style="margin-top: 10px">
         <label for="quantity">Quantité du produit (en g) :</label>
         <input
