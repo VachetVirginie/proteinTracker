@@ -125,6 +125,7 @@ export default {
         id: Date.now().toString(),
         date: new Date().toISOString().slice(0, 10),
         protein: this.calculatedProtein.toFixed(2),
+        proteinPer100g: this.proteinValue,
         quantity: this.quantity,
       };
       this.records.push(record);
@@ -140,9 +141,9 @@ export default {
       this.recordToEdit = { ...record };
     },
     recalculateProtein() {
-      if (this.recordToEdit.quantity && this.proteinValue) {
+      if (this.recordToEdit.quantity && this.recordToEdit.proteinPer100g) {
         this.recordToEdit.protein = (
-          (this.proteinValue / 100) *
+          (this.recordToEdit.proteinPer100g / 100) *
           this.recordToEdit.quantity
         ).toFixed(2);
       }
