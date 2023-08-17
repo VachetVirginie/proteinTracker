@@ -2,8 +2,6 @@
   <div>
     <input v-model="query" placeholder="Entrez le nom du produit" />
     <button @click="fetchProductsByName">Chercher</button>
-
-    <!-- Historique des protéines -->
     <div v-if="records.length" style="margin-top: 20px">
       <h3>Historique des protéines :</h3>
       <ul>
@@ -39,8 +37,6 @@
         />
       </li>
     </ul>
-
-    <!-- Popup pour affichage de la valeur en protéines -->
     <div
       v-if="showModal"
       style="
@@ -181,6 +177,4 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Votre CSS ici */
-</style>
+<style scoped></style>
