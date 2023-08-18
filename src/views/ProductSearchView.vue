@@ -102,6 +102,7 @@ export default {
       );
       this.currentProduct = productEntity;
       this.proteinValue = productEntity.proteinPer100g;
+      this.productName = productEntity.productName;
       this.showModal = true;
     },
     saveRecord() {
@@ -161,6 +162,7 @@ export default {
       }
     },
     storeRecord() {
+      console.log(this.proteinValue);
       const record = {
         id: Date.now().toString(),
         productName: this.productName,
@@ -170,7 +172,6 @@ export default {
         quantity: this.quantity,
       };
       this.records.push(record);
-      console.log(record);
       LocalStorageRepository.saveRecord(record);
       this.closePopup();
     },
