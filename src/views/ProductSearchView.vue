@@ -162,7 +162,6 @@ export default {
       }
     },
     storeRecord() {
-      console.log(this.proteinValue);
       const record = {
         id: Date.now().toString(),
         productName: this.productName,
