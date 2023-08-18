@@ -8,7 +8,6 @@
       <h3>Historique des protéines :</h3>
       <ul>
         <li v-for="record in records" :key="record.id">
-          {{ record }}
           <h3>{{ record.productName }} ({{ record.date }})</h3>
           {{ record.protein }} g pour {{ record.quantity }}g
           <button @click="beginEditRecord(record)">Modifier</button>
